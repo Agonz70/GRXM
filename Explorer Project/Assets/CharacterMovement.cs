@@ -7,13 +7,16 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private GameObject Character;
     [SerializeField] private float speed = 1.0f;
     [SerializeField] private GameObject model;
+    [SerializeField] private GameObject AudioManager;
     private Animator charAnim;
     private bool left, right;
+    private AudioManager audioManager;
 
     void Start()
     {
-        // obtain animator on first frame of start
+        // obtain animator and audio manager on first frame of start
         charAnim = Character.GetComponent<Animator>();
+        audioManager = AudioManager.GetComponent<AudioManager>();
     }
 
     void Update()
@@ -33,7 +36,13 @@ public class CharacterMovement : MonoBehaviour
             Debug.Log("mouse pressed");
             model.transform.rotation = charRotation;
         }
-        
+
+        // on clicking 'M' toggle background audio
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            audioManager.toggleBackgroundAudio();
+        }
+
         // set transition parameters for states
         if (inputH > 0) { left = false; right = true; }
         else if (inputH < 0) { left = true; right = false; }

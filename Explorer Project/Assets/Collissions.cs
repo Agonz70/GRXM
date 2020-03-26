@@ -7,12 +7,15 @@ using UnityEngine.UI;
 public class Collissions : MonoBehaviour
 {
 
+    [SerializeField] private GameObject AudioManager;
+    private AudioManager audioManager;
     public Text score;
 
     // Start is called before the first frame update
     private void Awake()
     {
         DontDestroyOnLoad(gameObject.transform.parent);
+        audioManager = AudioManager.GetComponent<AudioManager>();
     }
 
     void OnTriggerEnter2D(Collider2D objectHit)
@@ -23,6 +26,7 @@ public class Collissions : MonoBehaviour
         if(objectHit.gameObject.tag == "Interactable")
         {
             Debug.Log("Health Points ++Score++");
+            audioManager.playHeartAudio();
             Destroy(objectHit.gameObject);
         }
 
