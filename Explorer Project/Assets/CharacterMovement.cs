@@ -25,7 +25,7 @@ public class CharacterMovement : MonoBehaviour
         Vector3 charPosition = Character.transform.position;
         float inputH = Input.GetAxis("Horizontal");
         charPosition.x = charPosition.x + inputH * speed * Time.deltaTime;
-        Debug.Log(charPosition);
+        //Debug.Log(charPosition);
 
         Quaternion charRotation = Character.transform.rotation;
         charRotation = new Quaternion(charRotation.x, charRotation.y, charRotation.z, 1);
