@@ -26,4 +26,9 @@ public class AudioManager : MonoBehaviour
     {
         heartPowerUpAudio.Play();
     }
+
+    public void TurnOnBackGroundAudio()
+    {
+        backgroundAudio.Play();
+    }
 }

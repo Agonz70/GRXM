@@ -10,6 +10,8 @@ public class Collissions : MonoBehaviour
     [SerializeField] private GameObject AudioManager;
     private AudioManager audioManager;
     public Text score;
+    public GameObject DeathCanvas;
+    public GameObject HUDCanvas;
 
     // Start is called before the first frame update
     private void Awake()
@@ -34,8 +36,10 @@ public class Collissions : MonoBehaviour
         if (objectHit.gameObject.tag == "Kill")
         {
             Debug.Log("Death!!!~");
-            Destroy(gameObject, 0.5f);
-            SceneManager.LoadScene("Explorer Project");
+            Destroy(gameObject, 0.01f);
+            HUDCanvas.SetActive(false);
+            DeathCanvas.SetActive(true);
+            //SceneManager.LoadScene("Explorer Project");
         }
             
 

@@ -8,22 +8,25 @@ public class RandomFireSpawner : MonoBehaviour
     public GameObject player;
     private float xPos, yPos, zPos;
 
-    private void Start()
+    public void Start()
     {
         StartCoroutine(RandomPosition());
     }
 
     IEnumerator RandomPosition()
     {
-        xPos = player.transform.position.x + Random.Range(-5f,5f);
-        yPos = player.transform.position.y + Random.Range(6f,10f);
-        zPos = player.transform.position.z;
-        Vector3 randomPos = new Vector3(xPos, yPos, zPos);
+        if (player)
+        {
+            xPos = player.transform.position.x + Random.Range(-5f, 5f);
+            yPos = player.transform.position.y + Random.Range(6f, 10f);
+            zPos = player.transform.position.z;
+            Vector3 randomPos = new Vector3(xPos, yPos, zPos);
 
-        GameObject fire = Instantiate(firePrefab, randomPos, Quaternion.identity);
+            GameObject fire = Instantiate(firePrefab, randomPos, Quaternion.identity);
 
-        yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(2f);
 
-        StartCoroutine(RandomPosition());
+            StartCoroutine(RandomPosition());
+        }  
     }
 }
