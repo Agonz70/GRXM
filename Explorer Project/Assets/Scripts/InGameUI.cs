@@ -72,26 +72,31 @@ public class InGameUI : MonoBehaviour
 
     public void Go2MainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
     public void Go2SplashScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
     public void Go2Level1()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(4);
     }
 
     public void Go2Level2()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(5);
     }
 
     public void Go2LevelScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(2);
     }
 }

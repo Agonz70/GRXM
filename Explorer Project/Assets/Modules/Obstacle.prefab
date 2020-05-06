@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5575685082869214125}
   - component: {fileID: 583889895316291768}
   - component: {fileID: 583889895316291769}
-  - component: {fileID: 1478683057448656391}
+  - component: {fileID: 1236188655}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Kill
@@ -104,7 +104,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8879842626540132798}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.595403, y: -0.39, z: 1.24}
   m_LocalScale: {x: 0.29586, y: 0.29586, z: 0.29586}
   m_Children:
@@ -158,7 +158,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8879842626540132798}
   m_Mesh: {fileID: -2432090755550338912, guid: 68af4747b628d5447a17e803df3ba89e, type: 3}
---- !u!65 &1478683057448656391
+--- !u!65 &1236188655
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,5 +169,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.9999998, y: 3.8999999, z: 3.9999998}
-  m_Center: {x: -1.9999999, y: 3.9499998, z: -1.9999999}
+  m_Size: {x: 3.9999995, y: 3.6877916, z: 3.9999995}
+  m_Center: {x: -1.9999998, y: 3.8438957, z: -1.9999998}
