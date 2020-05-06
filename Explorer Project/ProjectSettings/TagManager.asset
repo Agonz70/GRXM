@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Kill
   - Interactable
+  - Light
+  - PowerUp
+  - Win
   layers:
   - Default
   - TransparentFX

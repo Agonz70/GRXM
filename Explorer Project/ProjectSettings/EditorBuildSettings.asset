@@ -5,10 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Explorer Main Platform.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Explorer Project.unity
-    guid: b3c2a2c16eff798489e7496a4dc02726
+    path: Assets/Scenes/GRXMSplashScreen.unity
+    guid: a591141249bb23743ad116b7faeb8bbd
+  - enabled: 1
+    path: Assets/Scenes/GRXMMenu.unity
+    guid: 3033e7a14186c814281aea7655d89c22
+  - enabled: 1
+    path: Assets/Scenes/GRXMLevel.unity
+    guid: 1e311d45ca90db243b2a8129fa340193
+  - enabled: 1
+    path: Assets/Scenes/GRXMLevel0.unity
+    guid: 7a0fc445153c6c64e936ee73af33e1f2
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: aa9f658048d7d5e449a7931d1558bdd9
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 97b54a26b35e8e9429a795f19475d05f
+  - enabled: 1
+    path: Assets/Scenes/GRXMInfoScreen.unity
+    guid: ac041ae28b3ab4e4fbc84557c9cb5ebe
   m_configObjects: {}
