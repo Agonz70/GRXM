@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: 97b54a26b35e8e9429a795f19475d05f
   - enabled: 1
-    path: Assets/Scenes/GRXMInfoScreen.unity
-    guid: ac041ae28b3ab4e4fbc84557c9cb5ebe
+    path: Assets/Scenes/Info.unity
+    guid: ca71789ff54fe424b831f45570762dc1
   m_configObjects: {}

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class InGameUI : MonoBehaviour
 {
-    private float minutes;
-    private float seconds;
+    public float minutes;
+    public float seconds;
     private bool menuPause = false;
     public Text time;
     public GameObject inGameMenu;

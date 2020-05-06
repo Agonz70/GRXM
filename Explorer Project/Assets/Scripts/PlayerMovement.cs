@@ -263,26 +263,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void PulsePowerUp()
     {
-        // if player has a powerup
         if(powerUp > 0)
             if (Input.GetMouseButtonDown(0))
             {
                 rigidBody.velocity = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - this.transform.position).normalized * pulseStrength;
                 powerUp--;
             }
-                
-        /*if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                //Vector3 pos = shootFX.transform.position; // make a sort of pulse gun particle effect
-                Vector3 pos = this.gameObject.transform.position;
-                Vector3 dir = hit.point - pos;
-                //Instantiate(laserPrefab, pos, Quaternion.LookRotation(dir));
-            }
-        }*/
     }
 
 }
