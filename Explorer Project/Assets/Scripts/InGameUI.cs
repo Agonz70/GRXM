@@ -8,6 +8,7 @@ public class InGameUI : MonoBehaviour
 {
     public float minutes;
     public float seconds;
+    public float milliseconds;
     private bool menuPause = false;
     public Text time;
     public GameObject inGameMenu;
@@ -28,14 +29,28 @@ public class InGameUI : MonoBehaviour
         {
             minutes = (int)Mathf.Floor(Time.timeSinceLevelLoad / 60);
             seconds = (int)Time.timeSinceLevelLoad % 60;
+            milliseconds = Mathf.Round(Time.timeSinceLevelLoad * 100f)/100f;
         }
 
+        /* This is for Minutes:Seconds counter
         if (seconds < 10)
             time.text = "0" + minutes + ":0" + seconds;
         else if (seconds > 9 && seconds < 60)
             time.text = "0" + minutes + ":" + seconds;
         else if (seconds > 59)
             time.text = minutes + ":" + seconds;
+        */
+
+        Debug.Log("milliseconds" + milliseconds);
+
+        // This is for Seconds:Milliseconds counter
+        if (milliseconds < 10f)
+            time.text =  "0" + milliseconds;
+        else if (milliseconds > 10f)
+            time.text = "" + milliseconds;
+
+        //if (milliseconds == seconds)
+            //time.text = milliseconds + ".00";
     }
 
     private void InGameMenu()
