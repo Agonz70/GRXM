@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 3f;
     public float gravityForce = 9.81f;
-    public float pulseStrength = 500f;
+    public float pulseStrength = 5f;
 
     public Image redArrow;
     public Image purpleArrow;
@@ -64,6 +64,10 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource backGroundAudio;
 
     public GameObject backGround;
+
+    private Vector3 mousePosXYZ;
+    private Vector2 playerPosXY;
+    private Vector2 mousePosXY;
 
     private void Start()
     {
@@ -263,10 +267,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void PulsePowerUp()
     {
-        if(powerUp > 0)
+        if (powerUp > 0)
             if (Input.GetMouseButtonDown(0))
             {
-                rigidBody.velocity = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - this.transform.position).normalized * pulseStrength;
+                mousePosXYZ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                playerPosXY = new Vector2(this.transform.position.x, this.transform.position.y);
+                mousePosXY = new Vector2(mousePosXYZ.x, mousePosXYZ.y);
+                rigidBody.velocity = (mousePosXY - playerPosXY).normalized * pulseStrength;
                 powerUp--;
             }
     }

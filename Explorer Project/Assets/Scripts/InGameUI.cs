@@ -41,8 +41,6 @@ public class InGameUI : MonoBehaviour
             time.text = minutes + ":" + seconds;
         */
 
-        Debug.Log("milliseconds" + milliseconds);
-
         // This is for Seconds:Milliseconds counter
         if (milliseconds < 10f)
             time.text =  "0" + milliseconds;
